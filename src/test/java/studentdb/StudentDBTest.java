@@ -1,6 +1,6 @@
 package studentdb;
 
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -9,11 +9,12 @@ class StudentDBTest {
     @Test
     void tobiasOut() {
         //given
-        String name;
-        //when
-        String actual = StudentDB.test();
-        //then
-        assert name.equals("tobias");
-    }
+        StudentDB testDB = new StudentDB();
 
+        //when
+        Student actual = testDB.getAllStudents()[0];
+
+        //then
+        assertEquals("tobias", actual.getName());
+    }
 }
