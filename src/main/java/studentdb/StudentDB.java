@@ -22,9 +22,10 @@ public class StudentDB {
                 '}';
     }
 
-    //leeres array
-    //bauenen der studenten reinstopfen
 
-    //oder direkt im array die stundenten stopfen
-
+    public String randomStudent() {
+        double randomNumber =  Math.random() * studentDB.length;
+        int i = (int) randomNumber;
+        return studentDB[i].toString();
+    }
 }
